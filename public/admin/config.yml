@@ -12,7 +12,6 @@ collections:
     name: posts
     folder: data/posts/
     create: true
-    slug: "{{title}}"
     fields:
       - { label: Title, name: title, widget: string }
       - label: "Author"
@@ -27,11 +26,9 @@ collections:
     label: Authors
     folder: data/authors/
     create: true
-    slug: "{{title}}"
     identifier_field: author_name
     fields:
       - { label: Name, name: author_name, widget: string }
-
   - name: "flows"
     label: "Flows"
     folder: "flows"

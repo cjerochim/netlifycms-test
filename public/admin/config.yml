@@ -1,10 +1,37 @@
 backend:
   name: git-gateway
   branch: master
+
 publish_mode: editorial_workflow
 media_folder: public/img
+
 public_folder: img
+
 collections:
+  - label: Posts
+    name: posts
+    folder: data/posts/
+    create: true
+    slug: "{{title}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        searchFields: ["author_name"]
+        valueField: "author_name"
+        multiple: true
+
+  - name: authors
+    label: Authors
+    folder: data/authors/
+    create: true
+    slug: "{{title}}"
+    identifier_field: author_name
+    fields:
+      - { label: Name, name: author_name, widget: string }
+
   - name: "flows"
     label: "Flows"
     folder: "flows"

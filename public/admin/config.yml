@@ -29,6 +29,7 @@ collections:
     identifier_field: author_name
     fields:
       - { label: Name, name: author_name, widget: string }
+
   - name: "flows"
     label: "Flows"
     folder: "flows"
@@ -37,12 +38,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Theme",
-          name: "theme",
+          label: "Test theme",
+          name: "theme_test",
           widget: "relation",
           collection: "theme",
           search_fields: "title",
-          value_field: "*",
+          value_field: "title",
           multiple: true,
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -51,6 +52,7 @@ collections:
     label: "Theme"
     folder: "themes"
     extension: "json"
+    identifier_field: title
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }

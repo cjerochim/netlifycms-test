@@ -5,6 +5,13 @@ publish_mode: editorial_workflow
 media_folder: public/img
 public_folder: img
 collections:
+  - name: "flows"
+    label: "Flows"
+    folder: "flows"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
   - name: "pages"
     label: "Pages"
     files:

@@ -13,13 +13,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Steps",
-          name: "step",
+          label: "Theme",
+          name: "theme",
           widget: "relation",
           collection: "theme",
-          search_fields: ["title"],
-          display_fields: ["title"],
+          search_fields: ["title", "colour"],
+          display_fields: ["title", "colour"],
           value_field: "*",
+          multiple: true,
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 

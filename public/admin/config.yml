@@ -17,8 +17,7 @@ collections:
           name: "theme",
           widget: "relation",
           collection: "theme",
-          search_fields: ["title", "colour"],
-          display_fields: ["title", "colour"],
+          search_fields: "title",
           value_field: "*",
           multiple: true,
         }

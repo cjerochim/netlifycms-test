@@ -34,30 +34,26 @@ collections:
     label: "Flows"
     folder: "flows"
     create: true
-    extension: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Test theme",
-          name: "theme_test",
-          widget: "relation",
-          collection: "theme",
-          search_fields: ["title"],
-          value_field: "title",
-          multiple: true,
-        }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Test theme",
+        name: "theme_test",
+        widget: "relation",
+        collection: "theme",
+        search_fields: ["title"],
+        value_field: "title",
+        multiple: true,
 
   - name: "theme"
     label: "Theme"
     folder: "themes"
-    extension: "json"
     identifier_field: title
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Feature Image", name: "themeImage", widget: "image" }
       - { label: "Colour", name: "colour", widget: "string" }
+
   - name: "pages"
     label: "Pages"
     files:

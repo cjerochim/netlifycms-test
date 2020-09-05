@@ -42,7 +42,7 @@ collections:
           name: "theme_test",
           widget: "relation",
           collection: "theme",
-          search_fields: "title",
+          search_fields: ["title"],
           value_field: "title",
           multiple: true,
         }

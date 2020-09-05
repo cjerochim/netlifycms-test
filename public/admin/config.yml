@@ -36,13 +36,13 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - label: "Test theme",
-        name: "theme_test",
-        widget: "relation",
-        collection: "theme",
-        search_fields: ["title"],
-        value_field: "title",
-        multiple: true,
+      - label: "Test theme"
+        name: "theme_test"
+        widget: "relation"
+        collection: "theme"
+        search_fields: ["title"]
+        value_field: "title"
+        multiple: true
 
   - name: "theme"
     label: "Theme"
